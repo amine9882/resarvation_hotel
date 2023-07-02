@@ -21,6 +21,10 @@ use App\Http\Controllers\Frontend\FrontendController;
 // });
 
 Route::get('/',[FrontendController::class, 'index']);
+Route::get('/category',[FrontendController::class,'category'])->name('category');
+Route::get('view-category/{slug}', [FrontendController::class,'show'])->name('view-category');
+Route::get('view-prod/{slug}/{prod_name}', [FrontendController::class,'showprod'])->name('view-prod');
+// Route::get('categories/{categorySlug}/{productSlug}', 'FrontendController@showprod')->name('products-show');
 
 
 Auth::routes();
@@ -29,8 +33,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => ['auth','isAdmin']], function () {
 
-
- 
 });
 
 Route::middleware(['auth', 'isAdmin'])->group(function () {
@@ -59,6 +61,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::post('product/edit/{id}',[ProductController::class ,'update'])->name('product.update');
 
     Route::get('product/delete/{id}',[ProductController::class ,'delete'])->name('product.delete');
+
+
 
 });
 

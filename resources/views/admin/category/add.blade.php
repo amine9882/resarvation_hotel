@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3>add category </h3>
+        <h3>Ajoute </h3>
     
     </div>
     <div class="card-body">
@@ -12,12 +12,12 @@
                 @csrf
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="exampleInputEmail1" class="form-label">name</label>
+                        <label for="exampleInputEmail1" class="form-label">nom</label>
                         <input type="text" name="name" class="form-control"> 
                       </div>
                       
                     <div class="col-md-6 mb-3">
-                        <label for="exampleInputEmail1" class="form-label">slug</label>
+                        <label for="exampleInputEmail1" class="form-label">type</label>
                         <input type="text" name="slug" class="form-control"> 
                     </div>
                     <div class="col-md-12 mb-3">
@@ -28,7 +28,7 @@
                     </div> 
                    
                     <div class="col-md-12 mb-3">
-                        <label for="formFile" class="form-label">image</label>
+                        <label for="formFile" class="form-label">photos</label>
                         <input class="form-control" name="image" type="file" id="formFile">
                     </div>
                     <div class="form-check">
@@ -44,7 +44,7 @@
                         </label>
                     </div>
                     <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary">add</button>
+                            <button type="submit" class="btn btn-primary">Ajoute</button>
                     </div>   
                 </div>
            </form>

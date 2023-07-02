@@ -3,9 +3,9 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h3>Products page</h3>
+        <h3>type d'hebergement </h3>
         <div class="float-right">
-            <a href="{{route('Product.create')}}" class="btn btn-info" >add products</a>
+            <a href="{{route('Product.create')}}" class="btn btn-info" >Ajoute l'hebergement</a>
         </div>
     </div>
     <div class="card-body">
@@ -13,13 +13,13 @@
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>category</th>
-                    <th>name</th>
+                    <th>type</th>
+                    <th>nom</th>
                     <th>description</th>
-                    <th>image</th>
-                    <th>original_price</th>
-                    <th>selling_price</th>
-                    <th>qty</th>
+                    <th>photo</th>
+                    <th>prix original</th>
+                    <th>prix promo</th>
+                    <th>nomber de chember</th>
                     <th>tax</th>
                     <th>action</th>
 
@@ -39,8 +39,8 @@
                             <td>{{$item->qty}}</td>
                             <td>{{$item->tax}}</td>
                             <td>
-                                <a href="{{url ('product/edit', $item->id)}}" class="btn btn-primary">Edit</a>
-                                <a href="{{url ('product/delete', $item->id)}}" class="btn btn-danger">delete</a>
+                                <a href="{{url ('product/edit', $item->id)}}" class="btn btn-primary">Modifie</a>
+                                <a href="{{url ('product/delete', $item->id)}}" class="btn btn-danger">Supprimé</a>
                             </td>
                         </tr>
                     @endforeach

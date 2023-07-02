@@ -4,7 +4,7 @@
 
 <div class="card">
     <div class="card-header">
-        <h3>edit category </h3>
+        <h3>Modifie  </h3>
     
     </div>
     <div class="card-body">
@@ -14,12 +14,12 @@
                 
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="exampleInputEmail1" class="form-label">name</label>
+                        <label for="exampleInputEmail1" class="form-label">nom</label>
                         <input type="text" name="name" value="{{$category->name}}" class="form-control"> 
                       </div>
                       
                     <div class="col-md-6 mb-3">
-                        <label for="exampleInputEmail1" class="form-label">slug</label>
+                        <label for="exampleInputEmail1" class="form-label">type</label>
                         <input type="text" name="slug" value="{{$category->slug}}" class="form-control"> 
                     </div>
                     <div class="col-md-12 mb-3">
@@ -31,7 +31,7 @@
                    
                     
                     <div class="col-md-12 mb-3">
-                        <label for="formFile" class="form-label">image</label>
+                        <label for="formFile" class="form-label">photo</label>
                         <input class="form-control" name="image" type="file" id="formFile">
                         @if($category->image)
                          <img src="{{asset('assets/uploads/category/'.$category->image)}}" style="width: 100px;" alt="category-image">
@@ -50,7 +50,7 @@
                         </label>
                     </div>
                     <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary">update</button>
+                            <button type="submit" class="btn btn-primary">Modifie</button>
                     </div>   
                 </div>
            </form>

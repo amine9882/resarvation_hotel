@@ -43,7 +43,7 @@
                             <a class="nav-link" href="#">home</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">collection</a>
+                            <a class="nav-link" href="{{url('category')}}">collection</a>
                           </li>
                         <!-- Authentication Links -->
                         @guest

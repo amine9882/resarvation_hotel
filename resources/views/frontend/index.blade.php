@@ -10,49 +10,41 @@
 
      <hr>
      
-    {{-- <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                   
-                 
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-       
-                            </div>
-                        @endif
-    
-                        {{ __('You are logged in!') }}
+     <section style="background-color: #eee;">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <h2>Rechercher par type d'hébergement </h2> 
+            @foreach ($featured_products as $prod)
+            <div class="col-md-8 col-lg-6 col-xl-4">
+              <div class="card text-black">
+                <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
+                <img src="{{asset('assets/uploads/product/'.$prod->image)}}"
+                  class="card-img-top" alt="Apple Computer" />
+                <div class="card-body">
+                  <div class="text-center">
+                    <h5 class="card-title">{{$prod->name}}</h5>
+                    <p class="text-muted mb-4">{{$prod->description}}</p>
+                  </div>
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <span>Nomber de chemner</span><span>{{$prod->qty}}</span>
                     </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Prix</span><span>{{$prod->selling_price}}€</span>
+                    </div>
+                    
+                  </div>
+                  <div class="d-flex justify-content-between total font-weight-bold mt-4">
+                    <span>Total</span><span>$7,197.00</span>
+                  </div>
                 </div>
+              </div>
             </div>
+            @endforeach
+          </div>
         </div>
-    </div> --}}
-    <div class="py-5">
-        <div class="container">
-            <div class="row">
-                <h2>Claviers, souris </h2>
-                {{-- <div class="owl-carousel featured-carousel owl-theme element1"> --}}
-                    @foreach ($featured_products as $prod)
-                        <div class="col-md-3 mt-3">
-                            <div style="height: 600px" class="card">
-                                <img src="{{asset('assets/uploads/product/'.$prod->image)}}" height="200px" class="card-img-top" alt="product">
-                                <div class="card-body">
-                                  <h5 class="card-title">{{$prod->name}}</h5>
-                                  <p class="card-text">{{$prod->description}}</p>
-                                  <span class="float-start">{{$prod->selling_price}}DZ</span>
-                                  <span class="float-end"><s>{{$prod->original_price}}DZ</s></span>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                {{-- </div> --}}
-               
-            </div>
-        </div>
-    </div>
+      </section>
+   
 @endsection
 
 

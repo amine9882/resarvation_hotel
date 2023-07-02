@@ -5,7 +5,7 @@
     <div class="card-header">
         <h3>category page</h3>
         <div class="float-right">
-            <a href="{{route('category.create')}}" class="btn btn-info" >add category</a>
+            <a href="{{route('category.create')}}" class="btn btn-info" >Ajoute type</a>
         </div>
     </div>
     <div class="card-body">
@@ -13,11 +13,11 @@
             <thead>
                 <tr>
                     <th>id</th>
-                    <th>name</th>
-                    <th>slug</th>
+                    <th>nom</th>
+                    <th>type</th>
                     <th>description</th>
-                    <th>prix</th>
-                    <th>image</th>
+                    
+                    <th>photos</th>
                     <th>action</th>
 
                 </tr>
@@ -30,11 +30,11 @@
                             <td>{{$item->name}}</td>
                             <td>{{$item->slug}}</td>
                             <td>{{$item->description}}</td>
-                            <td>{{$item->prix}}</td>
+                            
                             <td><img class="cate-image" src="{{ asset('assets/uploads/category/'.$item->image) }}"></td>
                             <td>
-                                <a href="{{url ('category/edit', $item->id)}}" class="btn btn-primary">Edit</a>
-                                <a href="{{url ('category/delete', $item->id)}}" class="btn btn-danger">delete</a>
+                                <a href="{{url ('category/edit', $item->id)}}" class="btn btn-primary">Modifie</a>
+                                <a href="{{url ('category/delete', $item->id)}}" class="btn btn-danger">Supprimé</a>
                             </td>
                         </tr>
                     @endforeach
