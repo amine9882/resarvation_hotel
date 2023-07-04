@@ -28,7 +28,7 @@
           </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="{{url('reservations')}}">
+          <a class="nav-link" href="{{url('reservations-dh')}}">
             <i class="material-icons">person</i>
             <p>Reservation</p>
           </a>

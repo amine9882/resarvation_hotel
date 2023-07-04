@@ -66,7 +66,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('product/delete/{id}',[ProductController::class ,'delete'])->name('product.delete');
 
-    // Route::get('/reservations', 'ReservationController@index')->name('reservations.index');
+    Route::get('/reservations-dh', 'ReservationController@index')->name('reservations.index');
 
 
 });
