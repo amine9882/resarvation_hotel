@@ -27,6 +27,12 @@
             <p>hebergement</p>
           </a>
         </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="{{url('reservations')}}">
+            <i class="material-icons">person</i>
+            <p>Reservation</p>
+          </a>
+        </li>
         
       </ul>
     </div>

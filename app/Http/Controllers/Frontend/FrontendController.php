@@ -54,24 +54,32 @@ class FrontendController extends Controller
       }
       
     }
-  public function showprod($slug, $prod_name)
-  {
-    if( Category::where('slug', $cate_slug)->exists())
-      {
-        if(Product::where('slug',$prod_name)->exists())
-        {
-          $products = Product:: where('name',$prod_slug)->first();
-          return view ('Frontend.view', compact('products'));
-        }
-        else
-        {
-          return redirect('/')->with('status',"les produit n'est exsit pas");
+    
+  // public function showprod($slug, $prod_name)
+  // {
+  //   if( Category::where('slug', $cate_slug)->exists())
+  //     {
+  //       if(Product::where('slug',$prod_name)->exists())
+  //       {
+  //         $products = Product:: where('name',$prod_slug)->first();
+  //         return view ('Frontend.view', compact('products'));
+  //       }
+  //       else
+  //       {
+  //         return redirect('/')->with('status',"les produit n'est exsit pas");
 
-        }
-      }
-      else
-      {
-        return redirect('/')->with('status',"les produit n'est exsit pas");
-      }
-  }  
+  //       }
+  //     }
+  //     else
+  //     {
+  //       return redirect('/')->with('status',"les produit n'est exsit pas");
+  //     }
+  // }  
+  public function see($id)
+{
+ 
+    $product = Product::findOrFail($id);
+    return view ('Frontend.view', compact('product'));
+    
+}
 }

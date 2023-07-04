@@ -23,8 +23,12 @@ use App\Http\Controllers\Frontend\FrontendController;
 Route::get('/',[FrontendController::class, 'index']);
 Route::get('/category',[FrontendController::class,'category'])->name('category');
 Route::get('view-category/{slug}', [FrontendController::class,'show'])->name('view-category');
-Route::get('view-prod/{slug}/{prod_name}', [FrontendController::class,'showprod'])->name('view-prod');
-// Route::get('categories/{categorySlug}/{productSlug}', 'FrontendController@showprod')->name('products-show');
+Route::get('/products/{id}',[FrontendController::class,'see'] )->name('products.show');
+
+Route::get('/reservations/create', 'ReservationController@create');
+Route::post('/reservations', 'ReservationController@store');
+
+
 
 
 Auth::routes();
@@ -62,6 +66,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     Route::get('product/delete/{id}',[ProductController::class ,'delete'])->name('product.delete');
 
+    // Route::get('/reservations', 'ReservationController@index')->name('reservations.index');
 
 
 });

@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($products as $product)
-        
+              
                     <div class="col-4">
                         <div class="card " style="width: 18rem;">
                             <img src="{{asset('assets/uploads/product/'.$product->image)}}" class="card-img-top" alt="...">
@@ -25,9 +25,9 @@
                                 <p class="card-text">{{ $product->description }}</p>
                                 <p class="card-text"> nomber de chamber  : {{ $product->qty }}</p>
                                 <p class="card-text">prix: {{ $product->selling_price }} €</p>
+                                
+                                <a href=" {{ url ('/products/' . $product->id) }} ">View Details</a>
 
-                                <a href="{{ url('view-prod/'.$category->slug.'/'.$product->name)}}" class="btn btn-primary">Go somewhere</a>
-                                <a href="{{ url('products-show', ['categorySlug' => $category->slug, 'productSlug' => $product->slug]) }}">{{ $product->name }}</a>
                             </div>
                         </div>
                     </div>

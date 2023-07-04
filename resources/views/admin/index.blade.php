@@ -6,4 +6,5 @@
         <h1>Reservation d'un hebergement</h1>
     </div>
 </div>
+
 @endsection

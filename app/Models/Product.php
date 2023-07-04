@@ -34,5 +34,8 @@ class Product extends Model
         {
             return $this->belongsTo(Category::class, 'cate_id', 'id');
         }
-   
+        public function reservations()
+        {
+            return $this->hasMany(Reservation::class);
+        }    
 }
